@@ -92,8 +92,7 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    Download
-                    CV</a>
+                    {{ __("Download CV") }}</a>
                 <a href="mailto:guland@protonmail.com"
                     class="text-white text-center inline-flex items-center tracking-wide uppercase bg-violet-red hover:bg-darkpurple focus:ring-4 focus:ring-violet-red font-medium rounded-md text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none">
                     <svg class="mr-1 -ml-1 w-4 h-4" aria-hidden="true" focusable="false"
@@ -109,7 +108,7 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    <span>Contact Me</span>
+                    <span>{{ __("Contact Me") }}</span>
                 </a>
             </nav>
         </div>

@@ -7,14 +7,8 @@
 
         <div class="introduction-text px-5 md:px-0" style="max-width: 630px;">
             <h2 class="text-black font-exo font-extrabold text-2xl sm:text-32px leading-tight mb-6">
-                Hi, I am
-                András Gulácsi. Nice to meet you.</h2>
-            <p class="text-black-text text-lg leading-normal">I have 2 years of work experience,
-                worked as an employee and did contract work
-                remotely. I am
-                mainly
-                a frontend developer, but also have backend skills and worked on fullstack projects
-                too.</p>
+                {{ __("Hi, I am András Gulácsi. Nice to meet you.") }}</h2>
+            <p class="text-black-text text-lg leading-normal">{{ __("I have 2 years of work experience, worked as an employee and did contract work remotely. I am mainly a frontend developer, but also have backend skills and worked on fullstack projects too.") }}</p>
         </div>
 
     </div>

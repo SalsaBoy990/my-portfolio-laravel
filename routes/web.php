@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LocalizationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+
+/* Get language, set language in session */
+Route::get('lang/{locale}', [LocalizationController::class, 'index'])->name('lang.index');

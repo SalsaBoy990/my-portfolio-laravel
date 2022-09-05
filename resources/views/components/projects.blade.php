@@ -9,7 +9,7 @@
                 fill="#CA4164" />
         </svg>
         <h2 class="z-10 text-black font-serif text-2xl sm:text-4xl mt-3 mb-10 tracking-wide">
-            Portfolio works</h2>
+            {{ __("Portfolio works") }}</h2>
     </div>
 
     <div class="projects-grid grid grid-cols-1 lg:grid-cols-2 justify-items-center gap-x-16 gap-y-12 z-10"
