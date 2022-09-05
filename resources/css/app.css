@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* General */
+html,
+body {
+    font-family: "Exo 2", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    @apply bg-gray-100;
+}
+
+.dark-body {
+    background-color: black;
+    color: white;
+}
+
+.content {
+    background-color: #3c4447;
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 100%;
+}
+
+/* Header */
+.header {
+    min-height: 422px;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 370px) {
+    .header {
+        min-height: 500px;
+    }
+}
+
+.fixed-nav {
+    max-width: 1440px;
+    width: 100vw;
+}
+
+.header-image {
+    max-width: 1420px;
+}
+
+@media screen and (max-width: 1439px) {
+    .header-image {
+        width: auto;
+        left: 10px;
+        right: 10px;
+    }
+}
+
+/* Introduction */
+.introduction {
+    background-image: url("/storage/app/public/images/bg-pattern-2.jpg");
+    min-height: 490px;
+}
+
+/* Skills */
+.box {
+    max-width: 320px;
+    width: 100%;
+    min-height: 320px;
+    height: 100%;
+}
+@media screen and (max-width: 576px) {
+    .box {
+        max-width: 100%;
+    }
+}
+
+.skills-grid {
+    max-width: 1020px;
+    margin: 0 auto;
+}
+@media screen and (max-width: 1023px) {
+    .skills-grid {
+        max-width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .skills-grid {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+/* Projects */
+.project {
+    max-width: 550px;
+    width: 100%;
+    min-height: 550px;
+    height: 100%;
+    background-color: white;
+}
+
+@media screen and (max-width: 576px) {
+    .project {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .projects-grid {
+        margin-left: 1rem !important;
+        margin-right: 1rem !important;
+    }
+}
+
+.link {
+    @apply inline-block px-6 py-2.5 bg-transparent text-main-600 font-medium text-sm leading-tight uppercase rounded hover:text-main-800 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none focus:ring-0 active:bg-gray-200 transition duration-150 ease-in-out;
+}
+
+.action-bottons-laptop-below {
+    display: none;
+}
+@media screen and (max-width: 1280px) {
+    .top-action-buttons {
+        display: none;
+    }
+    .action-bottons-laptop-below {
+        display: block;
+    }
+}
