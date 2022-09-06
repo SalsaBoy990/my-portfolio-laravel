@@ -9,5 +9,13 @@ module.exports = {
         "./storage/framework/views/*.php",
         "./resources/views/**/*.blade.php",
     ],
-    safelist: ["italic"],
+    safelist: [
+        "italic",
+        "bg-main-800",
+        "bg-grass-green",
+        "bg-turquoise",
+        "bg-brown",
+        "bg-main-400",
+        "bg-darkpurple",
+    ],
 };

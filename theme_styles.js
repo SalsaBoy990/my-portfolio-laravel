@@ -1,29 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
 
-let colors = {
-    ...defaultTheme.colors,
-    black: "#000",
-    "black-bg": "#3C4447",
-    "black-text": "rgba(0,0,0,0.8)",
-    "black-footer": "#2B373F",
-    "black-12pc": "rgba(0,0,0,0.12)",
-    white: "#fff",
-    white80pc: "rgba(255,255,255,0.8)",
-    white87pc: "rgba(255,255,255,0.87)",
-    "gray-text": "#CCCCCC",
-    white12pc: "rgba(255,255,255,0.12)",
-    "main-400": "#5D7DD9",
-    "main-500": "#3E50B4",
-    "main-600": "#25408F",
-    "main-800": "#1B286D",
-    brown: "#8F7425",
-    turquoise: "#25758F",
-    "grass-green": "#408F25",
-    "violet-red": "#CA4164",
-    darkpurple: "#8F2575",
-};
-
 module.exports = {
     theme: {
         themeVariants: ["dark"],
