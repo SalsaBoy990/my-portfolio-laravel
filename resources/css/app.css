@@ -47,6 +47,8 @@ body {
 
 .header-image {
     max-width: 1420px;
+    left: 10px;
+    right: 10px;
 }
 
 @media screen and (max-width: 1439px) {
@@ -62,6 +64,14 @@ body {
     background-image: url("/storage/app/public/images/bg-pattern-2.jpg");
     min-height: 490px;
 }
+.introduction > .greeting-box {
+    min-height: 150px;
+    margin: auto 0;
+}
+
+.introduction .introduction-text {
+    max-width: 630px;
+}
 
 /* Skills */
 .box {
@@ -74,6 +84,10 @@ body {
     .box {
         max-width: 100%;
     }
+}
+
+.box .box-heading {
+    line-height: 64px;
 }
 
 .skills-grid {
@@ -109,6 +123,24 @@ body {
         max-width: 100%;
     }
 }
+.project .card-header,
+.project .card-header > img {
+    height: 225px;
+}
+.project .card-header > img {
+    width: auto;
+}
+.project .card-body {
+    min-height: 260px;
+}
+.project .card-footer {
+    min-height: 63px;
+}
+
+.projects-grid {
+    max-width: 1165px;
+    margin: 0 auto;
+}
 
 @media screen and (max-width: 1280px) {
     .projects-grid {
@@ -131,4 +163,9 @@ body {
     .action-bottons-laptop-below {
         display: block;
     }
+}
+
+#scroll-to-top {
+    left: 50%;
+    transform: translateX(-50%);
 }

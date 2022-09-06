@@ -23,6 +23,6 @@ class Skills extends Component
      */
     public function render()
     {
-        return view('components.skills');
+        return view('components.landing.skills');
     }
 }

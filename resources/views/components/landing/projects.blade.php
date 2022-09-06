@@ -9,15 +9,16 @@
                 fill="#CA4164" />
         </svg>
         <h2 class="z-10 text-black font-serif text-2xl sm:text-4xl mt-3 mb-10 tracking-wide">
-            {{ __("Portfolio works") }}</h2>
+            {{ __("Portfolio works") }}
+        </h2>
     </div>
 
-    <div class="projects-grid grid grid-cols-1 lg:grid-cols-2 justify-items-center gap-x-16 gap-y-12 z-10"
-        style="max-width: 1165px; margin: 0 auto;">
+    <div
+        class="projects-grid grid grid-cols-1 lg:grid-cols-2 justify-items-center gap-x-16 gap-y-12 z-10">
 
         <div class="project z-10 rounded-md shadow-md flex flex-col">
-            <div class="card-header relative w-full" style="height: 225px;">
-                <img class="object-cover rounded-t-md" style="height: 225px;width: auto;"
+            <div class="card-header relative w-full">
+                <img class="object-cover rounded-t-md"
                     src="{{ asset('storage/images/numizmatika.jpg') }}" alt="Numizmatika app">
                 <div class="project-description absolute bottom-5 left-6">
                     <h3 class="font-exo text-white text-xl sm:text-2xl font-bold">Numizmatika app
@@ -26,7 +27,7 @@
                 </div>
             </div>
 
-            <div class="card-body px-6 py-6" style="min-height: 260px;">
+            <div class="card-body px-6 py-6">
                 <div class="text-editor text-black-text">
                     <p>React / Gatsby (in JavaScript) app for digital interactive table
                         (1920x1080px), with Strapi CMS
@@ -36,8 +37,7 @@
                 </div>
             </div>
 
-            <div class="card-footer border-t border-t-black-12pc flex justify-end"
-                style="min-height: 63px;">
+            <div class="card-footer border-t border-t-black-12pc flex justify-end">
                 <nav class="flex flex-wrap space-x-2 justify-evenly items-center">
                     <a href="https://work.drb.services/V_numizmatika/" target="blank"
                         class="link">Numizmatika
@@ -47,8 +47,8 @@
         </div>
 
         <div class="project z-10 rounded-md shadow-md flex flex-col">
-            <div class="card-header relative w-full" style="height: 225px;">
-                <img class="object-cover rounded-t-md" style="height: 225px;width: auto;"
+            <div class="card-header relative w-full">
+                <img class="object-cover rounded-t-md"
                     src="{{ asset('storage/images/starcity.jpg') }}" alt="UDG landing page">
                 <div class="project-description absolute bottom-5 left-6">
                     <h3 class="font-exo text-white text-xl sm:text-2xl font-bold">UDG landing page
@@ -58,7 +58,7 @@
                 </div>
             </div>
 
-            <div class="card-body px-6 py-6" style="min-height: 260px;">
+            <div class="card-body px-6 py-6">
                 <div class="text-editor text-black-text">
                     <p>React/Gatsby (in TypeScript), backend: Strapi CMS with Postgres database.
                         Handling projects, pages,
@@ -74,8 +74,7 @@
                 </div>
             </div>
 
-            <div class="card-footer border-t border-t-black-12pc flex justify-end"
-                style="min-height: 63px;">
+            <div class="card-footer border-t border-t-black-12pc flex justify-end">
                 <nav class="flex flex-wrap space-x-2 justify-evenly items-center">
                     <a href="https://github.com/SalsaBoy990/gatsby4-frontend-for-strapi"
                         target="blank" class="link">GITHUB
@@ -92,8 +91,8 @@
         </div>
 
         <div class="project z-10 rounded-md shadow-md flex flex-col">
-            <div class="card-header relative w-full" style="height: 225px;">
-                <img class="object-cover rounded-t-md" style="height: 225px;width: auto;"
+            <div class="card-header relative w-full">
+                <img class="object-cover rounded-t-md"
                     src="{{ asset('storage/images/magento2.jpg') }}"
                     alt="Magento 2 stores - frontend development">
                 <div class="project-description absolute bottom-5 left-6">
@@ -105,7 +104,7 @@
                 </div>
             </div>
 
-            <div class="card-body px-6 py-6" style="min-height: 260px;">
+            <div class="card-body px-6 py-6">
                 <div class="text-editor text-black-text">
                     <ul class="list-disc ml-6">
                         <li>Create store for So Fragrance’s Auora and Bespoke perfume brands based
@@ -121,8 +120,7 @@
                 </div>
             </div>
 
-            <div class="card-footer border-t border-t-black-12pc flex justify-end"
-                style="min-height: 63px;">
+            <div class="card-footer border-t border-t-black-12pc flex justify-end">
                 <nav class="flex flex-wrap space-x-2 justify-evenly items-center">
                     <a href="https://www.bespokelondonfragrance.com/" target="blank"
                         class="link">Bespoke</a>
@@ -137,39 +135,45 @@
         </div>
 
         <div class="project z-10 rounded-md shadow-md flex flex-col">
-            <div class="card-header relative w-full" style="height: 225px;">
-                <img class="object-cover rounded-t-md" style="height: 225px;width: auto;"
+            <div class="card-header relative w-full">
+                <img class="object-cover rounded-t-md"
                     src="{{ asset('storage/images/home-assistant-app.jpg') }}"
                     alt="Home Assistant app - admin screen">
                 <div class="project-description absolute bottom-5 left-6">
-                    <h3 class="font-exo text-white text-xl sm:text-2xl font-bold">Home Assistant admin app
+                    <h3 class="font-exo text-white text-xl sm:text-2xl font-bold">Home Assistant
+                        admin app
                     </h3>
                     <p class="text-white87pc">Client: BarbeQUBE (at DRB Services, 2022)
                     </p>
                 </div>
             </div>
 
-            <div class="card-body px-6 py-6" style="min-height: 260px;">
+            <div class="card-body px-6 py-6">
                 <div class="text-editor text-black-text">
-                    <p>React (TypeScript) IoT app. The client provides containers equipped with fridge, oven, ventillators,
-                    lights etc. for rent near turistic areas. The equipments have sensors and can be controlled
-                    remotely. The smart devices can be switched on/off, their settings modified by calling REST API endpoints. The sensory data is continuously received through an
-                    MQTT server. The app is made for Samsung Galaxy Tab A7 Lite SM-T 220 tablet. The test backend is running
-                    on a Rasberry Pi. In addition, there is a React Native app (for customers) where I had to create screens showing the state of the test container.</p>
+                    <p>React (TypeScript) IoT app. The client provides containers equipped with
+                        fridge, oven, ventillators,
+                        lights etc. for rent near turistic areas. The equipments have sensors and
+                        can be controlled
+                        remotely. The smart devices can be switched on/off, their settings modified
+                        by calling REST API endpoints. The sensory data is continuously received
+                        through an
+                        MQTT server. The app is made for Samsung Galaxy Tab A7 Lite SM-T 220 tablet.
+                        The test backend is running
+                        on a Rasberry Pi. In addition, there is a React Native app (for customers)
+                        where I had to create screens showing the state of the test container.</p>
                 </div>
             </div>
 
-            <div class="card-footer border-t border-t-black-12pc flex justify-end"
-                style="min-height: 63px;">
+            <div class="card-footer border-t border-t-black-12pc flex justify-end">
                 <nav class="flex flex-wrap space-x-2 justify-evenly items-center">
-                   
+
                 </nav>
             </div>
         </div>
 
         <div class="project z-10 rounded-md shadow-md flex flex-col">
-            <div class="card-header relative w-full" style="height: 225px;">
-                <img class="object-cover rounded-t-md" style="height: 225px;width: auto;"
+            <div class="card-header relative w-full">
+                <img class="object-cover rounded-t-md"
                     src="{{ asset('storage/images/shopify.jpg') }}"
                     alt="Shopify webshop - frontend">
                 <div class="project-description absolute bottom-5 left-6">
@@ -181,7 +185,7 @@
                 </div>
             </div>
 
-            <div class="card-body px-6 py-6" style="min-height: 260px;">
+            <div class="card-body px-6 py-6">
                 <div class="text-editor text-black-text">
                     <p>Managing, bugfixing the store, implementing small frontend features.
                         JadedLondon is a streetwear,
@@ -189,8 +193,7 @@
                 </div>
             </div>
 
-            <div class="card-footer border-t border-t-black-12pc flex justify-end"
-                style="min-height: 63px;">
+            <div class="card-footer border-t border-t-black-12pc flex justify-end">
                 <nav class="flex flex-wrap space-x-2 justify-evenly items-center">
                     <a href="https://jadedldn.com/" target="blank" class="link">JadedLondon</a>
                 </nav>
@@ -198,8 +201,8 @@
         </div>
 
         <div class="project z-10 rounded-md shadow-md flex flex-col">
-            <div class="card-header relative w-full" style="height: 225px;">
-                <img class="object-cover rounded-t-md" style="height: 225px;width: auto;"
+            <div class="card-header relative w-full">
+                <img class="object-cover rounded-t-md"
                     src="{{ asset('storage/images/static-site-express.jpg') }}"
                     alt="My static site generator ( 2019-)">
                 <div class="project-description absolute bottom-5 left-6">
@@ -211,7 +214,7 @@
                 </div>
             </div>
 
-            <div class="card-body px-6 py-6" style="min-height: 260px;">
+            <div class="card-body px-6 py-6">
                 <div class="text-editor text-black-text">
                     <p>static-site-express is a simple Node.js based static-site generator that uses
                         EJS and Markdown.
@@ -221,8 +224,7 @@
                 </div>
             </div>
 
-            <div class="card-footer border-t border-t-black-12pc flex justify-end"
-                style="min-height: 63px;">
+            <div class="card-footer border-t border-t-black-12pc flex justify-end">
                 <nav class="flex flex-wrap space-x-2 justify-evenly items-center">
                     <a href="https://github.com/SalsaBoy990/static-site-express" target="blank"
                         class="link">GITHUB</a>
@@ -233,8 +235,8 @@
         </div>
 
         <div class="project z-10 rounded-md shadow-md flex flex-col">
-            <div class="card-header relative w-full" style="height: 225px;">
-                <img class="object-cover rounded-t-md" style="height: 225px;width: auto;"
+            <div class="card-header relative w-full">
+                <img class="object-cover rounded-t-md"
                     src="{{ asset('storage/images/simirity.jpg') }}"
                     alt="WordPress website development">
                 <div class="project-description absolute bottom-5 left-6">
@@ -246,7 +248,7 @@
                 </div>
             </div>
 
-            <div class="card-body px-6 py-6" style="min-height: 260px;">
+            <div class="card-body px-6 py-6">
                 <div class="text-editor text-black-text">
                     <p>Improving a WordPress marketing website, implementing subpages based on UI
                         design, creating custom
@@ -254,8 +256,7 @@
                 </div>
             </div>
 
-            <div class="card-footer border-t border-t-black-12pc flex justify-end"
-                style="min-height: 63px;">
+            <div class="card-footer border-t border-t-black-12pc flex justify-end">
                 <nav class="flex flex-wrap space-x-2 justify-evenly items-center">
                     <a href="https://www.simirity.com/" target="blank" class="link">SIMIRITY
                         WEBSITE</a>
@@ -264,8 +265,8 @@
         </div>
 
         <div class="project z-10 rounded-md shadow-md flex flex-col">
-            <div class="card-header relative w-full" style="height: 225px;">
-                <img class="object-cover rounded-t-md" style="height: 225px;width: auto;"
+            <div class="card-header relative w-full">
+                <img class="object-cover rounded-t-md"
                     src="{{ asset('storage/images/vuecommerce.jpg') }}"
                     alt="Wordpress / WooCommerce projects">
                 <div class="project-description absolute bottom-5 left-6">
@@ -277,7 +278,7 @@
                 </div>
             </div>
 
-            <div class="card-body px-6 py-6" style="min-height: 260px;">
+            <div class="card-body px-6 py-6">
                 <div class="text-editor text-black-text">
                     <ul class="list-disc">
                         <li><b>Vuecommerce</b> Vue.js WP plugin for posts and products (filtering by
@@ -296,8 +297,7 @@
                 </div>
             </div>
 
-            <div class="card-footer border-t border-t-black-12pc flex justify-end"
-                style="min-height: 63px;">
+            <div class="card-footer border-t border-t-black-12pc flex justify-end">
                 <nav class="flex flex-wrap space-x-2 justify-evenly items-center">
                     <a href="https://github.com/SalsaBoy990/vuecommerce-plugin-wp-bedrock"
                         target="blank" class="link">VUECOMMERCE</a>

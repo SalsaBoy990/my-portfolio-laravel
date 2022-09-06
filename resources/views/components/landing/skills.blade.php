@@ -16,8 +16,7 @@
         class="skills-grid grid grid-cols-1 mobile:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-8 justify-items-center">
 
         <div class="box bg-main-800 rounded-md shadow-md">
-            <h3 class="w-full h-16 text-left pl-8 border-b border-b-white12pc font-exo text-lg mobile:text-xl font-bold tracking-wide"
-                style="line-height: 64px;">{{ __("JavaScript development") }}</h3>
+            <h3 class="box-heading w-full h-16 text-left pl-8 border-b border-b-white12pc font-exo text-lg mobile:text-xl font-bold tracking-wide">{{ __("JavaScript development") }}</h3>
             <div class="text-editor leading-loose">
                 <ul class="list-disc ml-8 mt-3 mr-4 text-white87pc">
                     <li>React</li>
@@ -32,8 +31,7 @@
         </div>
 
         <div class="box bg-grass-green rounded-md shadow-md">
-            <h3 class="w-full h-16 text-left pl-8 border-b border-b-white12pc font-exo text-lg mobile:text-xl font-bold tracking-wide"
-                style="line-height: 64px;">
+            <h3 class="box-heading w-full h-16 text-left pl-8 border-b border-b-white12pc font-exo text-lg mobile:text-xl font-bold tracking-wide">
                 {{ __("PHP, CMS, database") }}
             </h3>
             <div class="text-editor ml-8 mt-3 mr-4 leading-loose">
@@ -49,8 +47,7 @@
         </div>
 
         <div class="box bg-turquoise rounded-md shadow-md">
-            <h3 class="w-full h-16 text-left pl-8 border-b border-b-white12pc font-exo text-lg mobile:text-xl font-bold tracking-wide"
-                style="line-height: 64px;">
+            <h3 class="box-heading w-full h-16 text-left pl-8 border-b border-b-white12pc font-exo text-lg mobile:text-xl font-bold tracking-wide">
                 HTML, CSS, sitebuild</h3>
             <div class="text-editor ml-8 mt-3 mr-4 leading-loose">
                 <ul class="list-disc text-white87pc">
@@ -65,8 +62,7 @@
         </div>
 
         <div class="box bg-brown rounded-md shadow-md">
-            <h3 class="w-full h-16 text-left pl-8 border-b border-b-white12pc font-exo text-lg mobile:text-xl font-bold tracking-wide"
-                style="line-height: 64px;">
+            <h3 class="box-heading w-full h-16 text-left pl-8 border-b border-b-white12pc font-exo text-lg mobile:text-xl font-bold tracking-wide">
                 {{ __("Git, Docker, Linux etc.") }}
             </h3>
             <div class="text-editor ml-8 mt-3 mr-4 leading-loose">
@@ -80,8 +76,7 @@
         </div>
 
         <div class="box bg-main-400 rounded-md shadow-md">
-            <h3 class="w-full h-16 text-left pl-8 border-b border-b-white12pc font-exo text-lg mobile:text-xl font-bold tracking-wide"
-                style="line-height: 64px;">
+            <h3 class="box-heading w-full h-16 text-left pl-8 border-b border-b-white12pc font-exo text-lg mobile:text-xl font-bold tracking-wide">
                 {{ __("Other skills") }}
             </h3>
             <div class="text-editor ml-8 mt-3 mr-4 leading-loose">
@@ -94,8 +89,7 @@
         </div>
 
         <div class="box bg-darkpurple rounded-md shadow-md">
-            <h3 class="w-full h-16 text-left pl-8 border-b border-b-white12pc font-exo text-lg mobile:text-xl font-bold tracking-wide"
-                style="line-height: 64px;">
+            <h3 class="box-heading w-full h-16 text-left pl-8 border-b border-b-white12pc font-exo text-lg mobile:text-xl font-bold tracking-wide">
                 {{ __("UI/UX design knowledge") }}
             </h3>
             <div class="text-editor ml-8 mt-3 mr-4 leading-loose text-white87pc">

@@ -23,6 +23,6 @@ class Introduction extends Component
      */
     public function render()
     {
-        return view('components.introduction');
+        return view('components.landing.introduction');
     }
 }

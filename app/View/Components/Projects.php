@@ -23,6 +23,6 @@ class Projects extends Component
      */
     public function render()
     {
-        return view('components.projects');
+        return view('components.landing.projects');
     }
 }
