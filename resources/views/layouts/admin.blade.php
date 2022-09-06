@@ -18,12 +18,13 @@
     @livewireStyles
 
     <!-- Scripts -->
-    <script src="/build/assets/alpine.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer>
+    </script>
     <script src="/build/assets/init-alpine.js"></script>
     <x-head.tinymce-config />
 </head>
 
-<body class="sans-serif">
+<body class="sans-serif" style="display: block !important;">
     <x-jet-banner />
     <div class="flex h-screen bg-gray-100 dark:bg-gray-900"
         :class="{ 'overflow-hidden': isSideMenuOpen }">

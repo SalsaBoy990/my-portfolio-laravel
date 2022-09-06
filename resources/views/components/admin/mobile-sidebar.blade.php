@@ -29,30 +29,6 @@
             </li>
         </ul>
         <ul>
-            <li
-                class="relative px-6 py-3 {{ request()->routeIs('meta.index') ? 'bg-blue-50' : '' }}">
-                <a class="inline-flex items-center w-full text-sm {{ request()->routeIs('meta.index') ? 'font-bold text-gray-800' : 'font-medium' }} transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                    href="{{ route('meta.index')}}">
-                    <x-icon.cog></x-icon.cog>
-                    <span class="ml-4">{{ __("Site settings") }}</span>
-                </a>
-            </li>
-            <li
-                class="relative px-6 py-3 {{ request()->routeIs('qualification.index') ? 'bg-blue-50' : '' }}">
-                <a class="inline-flex items-center w-full text-sm transition-colors {{ request()->routeIs('qualification.index') ? 'font-bold text-gray-800' : 'font-semibold' }} duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                    href="{{ route('qualification.index')}}">
-                    <x-icon.qualifications></x-icon.qualifications>
-                    <span class="ml-4">{{ __("Qualifications") }}</span>
-                </a>
-            </li>
-            <li
-                class="relative px-6 py-3 {{ request()->routeIs('service.index') ? 'bg-blue-50' : '' }}">
-                <a class="inline-flex items-center w-full text-sm {{ request()->routeIs('service.index') ? 'font-bold text-gray-800' : 'font-semibold' }} transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                    href="{{ route('service.index')}}">
-                    <x-icon.services></x-icon.services>
-                    <span class="ml-4">{{ __("Services") }}</span>
-                </a>
-            </li>
 
             @if (auth()->user()->role === 'admin')
             <li
