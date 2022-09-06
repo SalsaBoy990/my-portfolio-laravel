@@ -18,16 +18,24 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-});
-
-
 /* Get language, set language in session */
 Route::get('lang/{locale}', [LocalizationController::class, 'index'])->name('lang.index');
+
+
+// Routes only for authenticated users...
+Route::group(
+    ['middleware' => ['auth:sanctum', config('jetstream.auth_session'), 'verified'], 'prefix' => 'admin'],
+    function () {
+        Route::get('dashboard', function () {
+            return view('admin/dashboard');
+        })->name('dashboard');
+
+        Route::get('meta', [MetaController::class, 'index'])->name('meta.index');
+        Route::put('meta/{meta}', [MetaController::class, 'update'])->name('meta.update');
+
+        Route::get('user', [UserController::class, 'index'])->name('user.index');
+        Route::post('user', [UserController::class, 'store'])->name('user.store');
+        Route::get('user/create', [UserController::class, 'create'])->name('user.create');
+        Route::delete('user/{user}', [UserController::class, 'destroy'])->name('user.destroy');
+    }
+);
