@@ -2,7 +2,7 @@
     class="footer relative bg-black-footer flex flex-row justify-between items-center h-16 px-4 mobile:px-7">
     <small class="text-gray-text">{{ __("© András Gulácsi 2022. All right reserved!") }}</small>
 
-    <a href="https://github.com/SalsaBoy990">
+    <a href="{{ $githubLink }}">
         <svg width="37" height="37" viewBox="0 0 37 37" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path

@@ -3,7 +3,7 @@
     <div class="brand absolute top-7 left-8 flex flex-row gap-2 items-center z-10">
         <x-landing.logo></x-landing.logo>
         <span class="text-base sm:text-xl font-bold text-white tracking-wide font-exo">
-            {{ __("András Gulácsi") }}</span>
+            {{ $fullName }}</span>
     </div>
 
     <div class="absolute top-6 right-6 z-50">
@@ -14,14 +14,14 @@
         class="top-action-buttons flex flex-row absolute top-14 right-2 sm:right-6 z-50 justify-end">
         <ul class="action-buttons z-40 text-right">
             <li class="mb-2">
-                <a href="{{ asset('storage/pdf/andras.gulacsi.hungary.cv.2022.pdf') }}" download
+                <a href="{{ asset($cv) }}" download
                     class="text-white text-center inline-flex items-center tracking-wide uppercase bg-main-400 hover:bg-main-600 focus:ring-4 focus:ring-main-400 font-medium rounded-md text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none">
                     <x-icon.download></x-icon.download>
                     {{ __("Download CV") }}
                 </a>
             </li>
             <li class="pt-0">
-                <a href="mailto:guland@protonmail.com"
+                <a href="mailto:{{ $emailAddress }}"
                     class="text-white text-center inline-flex items-center tracking-wide uppercase bg-violet-red hover:bg-darkpurple focus:ring-4 focus:ring-violet-red font-medium rounded-md text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none">
                     <x-icon.contact></x-icon.contact>
                     <span>{{ __("Contact Me") }}</span>
@@ -35,10 +35,10 @@
     <div class="hero-text text-left self-center justify-self-center z-10 px-6 sm:px-5 md:px-0">
         <h1
             class="text-3xl mb-2 sm:mb-0 mobile:text-3xl sm:text-4xl md:text-56px text-white font-serif leading-tight">
-            {{ __("A frontend & PHP Developer") }}
+            {{ __($title) }}
         </h1>
         <p class="text-lg mobile:text-xl md:text-2xl text-white80pc font-medium">
-            {{ __("I create landing pages, websites, and e-commerce stores") }}
+            {{ __($subtitle) }}
         </p>
 
         <div
@@ -49,18 +49,17 @@
                     d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
             </svg>
             <span class="inline-block ml-1">{{ __("Still under development!")}}</span>
-
         </div>
 
 
         <div class="action-bottons-laptop-below mt-6">
             <nav>
-                <a href="{{ asset('storage/pdf/andras.gulacsi.hungary.cv.2022.pdf') }}" download
+                <a href="{{ asset($cv) }}" download
                     class="text-white text-center inline-flex items-center tracking-wide uppercase bg-main-400 hover:bg-main-600 focus:ring-4 focus:ring-main-400 font-medium rounded-md text-sm px-5 py-2.5 mr-3 mb-3 focus:outline-none">
                     <x-icon.download></x-icon.download>
                     {{ __("Download CV") }}
                 </a>
-                <a href="mailto:guland@protonmail.com"
+                <a href="mailto:{{ $emailAddress }}"
                     class="text-white text-center inline-flex items-center tracking-wide uppercase bg-violet-red hover:bg-darkpurple focus:ring-4 focus:ring-violet-red font-medium rounded-md text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none">
                     <x-icon.download></x-icon.download>
                     <span>{{ __("Contact Me") }}</span>

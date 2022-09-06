@@ -6,14 +6,29 @@ use Illuminate\View\Component;
 
 class Header extends Component
 {
+    public string $fullName;
+    public string $title;
+    public string $subtitle;
+    public string $emailAddress;
+    public string $cv;
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
-    {
-        //
+    public function __construct(
+        string $fullName,
+        string $title,
+        string $subtitle,
+        string $emailAddress,
+        string $cv
+    ) {
+        $this->fullName = $fullName;
+        $this->title = $title;
+        $this->subtitle = $subtitle;
+        $this->emailAddress = $emailAddress;
+        $this->cv = $cv;
     }
 
     /**

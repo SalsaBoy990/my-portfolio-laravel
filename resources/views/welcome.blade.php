@@ -70,10 +70,11 @@
     </div>
 
     <div class="content">
-        <x-header></x-header>
-        <x-introduction></x-introduction>
-        <x-skills></x-skills>
-        <x-projects></x-projects>
+        <x-header :fullName="$meta->full_name" :title="$meta->title" :subtitle="$meta->subtitle"
+            :emailAddress="$meta->email_address" :cv="$meta->cv"></x-header>
+        <x-introduction :greetingHeadline="$meta->greeting_headline" :greetingDescription="$meta->greating_description" :profilePhoto="$meta->profile_photo"></x-introduction>
+        <x-skills :skills="$skills"></x-skills>
+        <x-projects :projects="$projects"></x-projects>
 
         <div class="action-bottons-above-footer mb-6 flex flex-row justify-center">
             <nav>
@@ -90,7 +91,7 @@
             </nav>
         </div>
 
-        <x-footer></x-footer>
+        <x-footer :githubLink="$meta->github_link"></x-footer>
     </div>
 </body>
 

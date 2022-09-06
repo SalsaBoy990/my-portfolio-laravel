@@ -6,14 +6,15 @@ use Illuminate\View\Component;
 
 class Projects extends Component
 {
+    public \Illuminate\Database\Eloquent\Collection $projects;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(\Illuminate\Database\Eloquent\Collection $projects)
     {
-        //
+        $this->projects = $projects;
     }
 
     /**

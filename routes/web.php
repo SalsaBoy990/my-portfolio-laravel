@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LocalizationController;
+use App\Http\Controllers\LandingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +15,7 @@ use App\Http\Controllers\LocalizationController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [LandingController::class, 'index'])->name('landing.page');
 
 /* Get language, set language in session */
 Route::get('lang/{locale}', [LocalizationController::class, 'index'])->name('lang.index');

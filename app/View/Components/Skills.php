@@ -6,14 +6,17 @@ use Illuminate\View\Component;
 
 class Skills extends Component
 {
+    public \Illuminate\Database\Eloquent\Collection $skills;
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
-    {
-        //
+    public function __construct(
+        \Illuminate\Database\Eloquent\Collection $skills,
+    ) {
+        $this->skills = $skills;
     }
 
     /**
