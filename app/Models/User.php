@@ -9,6 +9,11 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\Casts\Attribute;
+
+use App\Models\Meta;
+use App\Models\Skill;
+use App\Models\Project;
 
 class User extends Authenticatable
 {
@@ -26,7 +31,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
-        'password',
+        'password'
     ];
 
     /**
@@ -58,4 +63,72 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    /**
+     * Users' roles
+     * 
+     * @var array
+     */
+    public const ROLES = [
+        1 => 'admin',
+        2 => 'client'
+    ];
+
+    /**
+     * Accessor for the user's role.
+     *
+     * @return \Illuminate\Database\Eloquent\Casts\Attribute
+     */
+    protected function role(): Attribute
+    {
+        return Attribute::make(
+            get: fn ($value) => self::ROLES[$value]
+        );
+    }
+
+    /**
+     * @return bool
+     */
+    public function isAdmin(): bool
+    {
+        return $this->role === 'admin';
+    }
+
+    /**
+     * @return bool
+     */
+    public function isClient(): bool
+    {
+        return $this->role === 'client';
+    }
+
+    /**
+     * User has many (actually 2) metas
+     * 
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function metas()
+    {
+        return $this->hasMany(Meta::class);
+    }
+
+    /**
+     * User has many skills
+     * 
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function skills()
+    {
+        return $this->hasMany(Skill::class);
+    }
+
+    /**
+     * User has many projects
+     * 
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function projects()
+    {
+        return $this->hasMany(Project::class);
+    }
 }

@@ -13,7 +13,7 @@
         <a href="{{ route('meta.index') }}"
             class="flex flex-col lg:flex-row items-center p-4 bg-white hover:bg-blue-50 border border-gray-200 rounded-lg shadow-xs dark:bg-gray-800">
             <div
-                class="p-3 mr-4 text-orange-500 bg-orange-100 rounded-full dark:text-orange-100 dark:bg-orange-500">
+                class="p-3 mr-0 lg:mr-4 text-orange-500 bg-orange-100 rounded-full dark:text-orange-100 dark:bg-orange-500">
                 <x-icon.cog></x-icon.cog>
             </div>
             <div
@@ -22,35 +22,35 @@
             </div>
         </a>
         <!-- Card -->
-        <a href="{{ route('meta.index') }}"
+        <a href="{{ route('skill.index') }}"
             class="flex flex-col lg:flex-row items-center p-4 bg-white hover:bg-blue-50 rounded-lg border border-gray-200 shadow-xs dark:bg-gray-800">
             <div
-                class="p-3 mr-4 text-green-500 bg-green-100 rounded-full dark:text-green-100 dark:bg-green-500">
-                <x-icon.services></x-icon.services>
+                class="p-3 mr-0 lg:mr-4 text-green-500 bg-green-100 rounded-full dark:text-green-100 dark:bg-green-500">
+                <x-icon.briefcase></x-icon.briefcase>
             </div>
             <div
                 class="text-lg font-bold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100">
-                {{ __('Services') }}
+                {{ __('Skills') }}
             </div>
         </a>
 
         <!-- Card -->
-        <a href="{{ route('meta.index') }}"
+        <a href="{{ route('project.index') }}"
             class="flex flex-col lg:flex-row items-center p-4 bg-white hover:bg-blue-50 rounded-lg border border-gray-200 shadow-xs dark:bg-gray-800">
             <div
-                class="p-3 mr-4 text-blue-500 bg-blue-100 rounded-full dark:text-blue-100 dark:bg-blue-500">
-                <x-icon.qualifications></x-icon.qualifications>
+                class="p-3 mr-0 lg:mr-4 text-blue-500 bg-blue-100 rounded-full dark:text-blue-100 dark:bg-blue-500">
+                <x-icon.services></x-icon.services>
             </div>
             <div
                 class="text-lg font-bold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100">
-                {{ __('Qualifications') }}
+                {{ __('Projects') }}
             </div>
         </a>
 
         <a href="{{ route('profile.show') }}"
             class="flex flex-col lg:flex-row items-center p-4 bg-white hover:bg-blue-50 rounded-lg border border-gray-200 shadow-xs dark:bg-gray-800">
             <div
-                class="p-3 mr-4 text-teal-500 bg-teal-100 rounded-full dark:text-teal-100 dark:bg-teal-500">
+                class="p-3 mr-0 lg:mr-4 text-teal-500 bg-teal-100 rounded-full dark:text-teal-100 dark:bg-teal-500">
                 <x-icon.user></x-icon.user>
             </div>
             <div

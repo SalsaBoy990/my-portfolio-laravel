@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class UpdateSkillRequest extends FormRequest
 {
@@ -13,7 +14,7 @@ class UpdateSkillRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return auth()->user()->role === 'admin' || auth()->user()->role === 'client';
     }
 
     /**
@@ -24,7 +25,20 @@ class UpdateSkillRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title' => ['required', 'max:255'],
+            'content' => ['required', 'max:2000'],
+            'language' => ['required', Rule::in(['hu', 'en'])],
+            'bg_color' => [
+                'required', Rule::in([
+                    'bg-main-800',
+                    'bg-main-400',
+                    'bg-grass-green',
+                    'bg-turquoise',
+                    'bg-brown',
+                    'bg-darkpurple',
+                    'bg-gray-400'
+                ])
+            ],
         ];
     }
 }

@@ -25,9 +25,12 @@
                 <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                     href="{{ route('landing.page') }}" target="_blank">
 
-                    <span class="mr-1">{{ __("See website") }}</span>
+                    <span class="mr-1">{{ __("Website") }}</span>
                     <x-icon.link></x-icon.link>
                 </a>
+            </li>
+            <li>
+                <x-language-switcher></x-language-switcher>
             </li>
             <!-- Theme toggler -->
             <!-- Notifications menu -->

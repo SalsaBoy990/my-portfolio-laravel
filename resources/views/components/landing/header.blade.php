@@ -7,30 +7,8 @@
     </div>
 
     <div class="absolute top-6 right-6 z-50">
-        @include('partials/language_switcher')
+        <x-language-switcher></x-language-switcher>
     </div>
-
-    <div
-        class="top-action-buttons flex flex-row absolute top-14 right-2 sm:right-6 z-50 justify-end">
-        <ul class="action-buttons z-40 text-right">
-            <li class="mb-2">
-                <a href="{{ asset($cv) }}" download
-                    class="text-white text-center inline-flex items-center tracking-wide uppercase bg-main-400 hover:bg-main-600 focus:ring-4 focus:ring-main-400 font-medium rounded-md text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none">
-                    <x-icon.download></x-icon.download>
-                    {{ __("Download CV") }}
-                </a>
-            </li>
-            <li class="pt-0">
-                <a href="mailto:{{ $emailAddress }}"
-                    class="text-white text-center inline-flex items-center tracking-wide uppercase bg-violet-red hover:bg-darkpurple focus:ring-4 focus:ring-violet-red font-medium rounded-md text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none">
-                    <x-icon.contact></x-icon.contact>
-                    <span>{{ __("Contact Me") }}</span>
-                </a>
-
-            </li>
-        </ul>
-    </div>
-
 
     <div class="hero-text text-left self-center justify-self-center z-10 px-6 sm:px-5 md:px-0">
         <h1
@@ -42,7 +20,7 @@
         </p>
 
         <div
-            class="my-4 text-sm inline-flex items-center py-1 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-semibold bg-gray-200 text-red-800 rounded">
+            class="hidden my-4 text-sm inline-flex items-center py-1 px-2.5 leading-none text-center whitespace-nowrap align-baseline font-semibold bg-gray-200 text-red-800 rounded">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                 stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round"
@@ -52,7 +30,7 @@
         </div>
 
 
-        <div class="action-bottons-laptop-below mt-6">
+        <div class="action-bottons mt-6">
             <nav>
                 <a href="{{ asset($cv) }}" download
                     class="text-white text-center inline-flex items-center tracking-wide uppercase bg-main-400 hover:bg-main-600 focus:ring-4 focus:ring-main-400 font-medium rounded-md text-sm px-5 py-2.5 mr-3 mb-3 focus:outline-none">

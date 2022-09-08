@@ -71,14 +71,16 @@
 
     <div class="content">
         <x-header :fullName="$meta->full_name" :title="$meta->title" :subtitle="$meta->subtitle"
-            :emailAddress="$meta->email_address" :cv="$meta->cv"></x-header>
-        <x-introduction :greetingHeadline="$meta->greeting_headline" :greetingDescription="$meta->greating_description" :profilePhoto="$meta->profile_photo"></x-introduction>
+            :emailAddress="$meta->email_address" :cv="$meta->cv_link"></x-header>
+        <x-introduction :greetingHeadline="$meta->greeting_headline"
+            :greetingDescription="$meta->greating_description"
+            :profilePhoto="$meta->profile_photo_link"></x-introduction>
         <x-skills :skills="$skills"></x-skills>
         <x-projects :projects="$projects"></x-projects>
 
         <div class="action-bottons-above-footer mb-6 flex flex-row justify-center">
             <nav>
-                <a href="{{ asset('storage/pdf/andras.gulacsi.hungary.cv.2022.pdf') }}" download
+                <a href="{{ $meta->cv_link }}" download
                     class="text-white text-center inline-flex items-center tracking-wide uppercase bg-main-400 hover:bg-main-600 focus:ring-4 focus:ring-main-400 font-medium rounded-md text-sm px-5 py-2.5 mr-3 mb-3 focus:outline-none">
                     <x-icon.download></x-icon.download>
                     {{ __("Download CV") }}

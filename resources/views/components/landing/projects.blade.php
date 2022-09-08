@@ -19,7 +19,7 @@
         @foreach ($projects as $project)
         <div class="project z-10 rounded-md shadow-md flex flex-col">
             <div class="card-header relative w-full">
-                <img class="object-cover rounded-t-md" src="{{ asset($project->cover_image) }}"
+                <img class="object-cover rounded-t-md" src="{{ $project->cover_image_link }}"
                     alt="{{ $project->title }}">
                 <div class="project-description absolute bottom-5 left-6">
                     <h3 class="font-exo text-white text-xl sm:text-2xl font-bold">

@@ -18,19 +18,18 @@ class ProjectPolicy
      */
     public function viewAny(User $user)
     {
-        //
+        return $user->isClient() || $user->isAdmin();
     }
 
     /**
      * Determine whether the user can view the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\project  $project
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function view(User $user, project $project)
+    public function view(User $user)
     {
-        //
+        return $user->isAdmin() || $user->isClient();
     }
 
     /**
@@ -41,54 +40,28 @@ class ProjectPolicy
      */
     public function create(User $user)
     {
-        //
+        return $user->isAdmin() || $user->isClient();
     }
 
     /**
      * Determine whether the user can update the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\project  $project
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function update(User $user, project $project)
+    public function update(User $user)
     {
-        //
+        return $user->isAdmin() || $user->isClient();
     }
 
     /**
      * Determine whether the user can delete the model.
      *
      * @param  \App\Models\User  $user
-     * @param  \App\Models\project  $project
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function delete(User $user, project $project)
+    public function delete(User $user)
     {
-        //
-    }
-
-    /**
-     * Determine whether the user can restore the model.
-     *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\project  $project
-     * @return \Illuminate\Auth\Access\Response|bool
-     */
-    public function restore(User $user, project $project)
-    {
-        //
-    }
-
-    /**
-     * Determine whether the user can permanently delete the model.
-     *
-     * @param  \App\Models\User  $user
-     * @param  \App\Models\project  $project
-     * @return \Illuminate\Auth\Access\Response|bool
-     */
-    public function forceDelete(User $user, project $project)
-    {
-        //
+        return $user->isAdmin() || $user->isClient();
     }
 }

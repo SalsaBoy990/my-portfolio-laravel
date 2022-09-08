@@ -8,19 +8,23 @@
     <div>
         <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
 
-            <div class="md:grid lg:grid-cols-3 lg:gap-6">
+            <div class="md:grid md:grid-cols-3 md:gap-6 mb-10 sm:mb-0">
                 <x-jet-section-title>
                     <x-slot name="title">{{ __("Your Role") }}</x-slot>
                     <x-slot name="description">{{ __("You can be either a customer or an admin. You cannot change your role.") }}</x-slot>
                 </x-jet-section-title>
 
-                <div class="mt-5 lg:mt-0 lg:col-span-2">
+                <div class="mt-5 md:mt-0 md:col-span-2">
                     <div class="px-4 py-5 bg-white sm:p-6 shadow sm:rounded-md">
                         <div class="grid grid-cols-6 gap-6">
 
                             <span
                                 class="px-4 py-2 rounded-full border border-gray-300 text-gray-500 font-semibold text-sm flex align-center w-max transition duration-300 ease">
-                                {{ auth()->user()->role}}
+                                @if (auth()->user()->role === 'admin')
+                                    {{ __('admin') }}
+                                @else
+                                    {{ __('client') }}
+                                @endif
                             </span>
                         </div>
                     </div>

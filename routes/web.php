@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LocalizationController;
 use App\Http\Controllers\LandingController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\MetaController;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\SkillController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,7 +34,22 @@ Route::group(
         })->name('dashboard');
 
         Route::get('meta', [MetaController::class, 'index'])->name('meta.index');
+        Route::get('meta/{meta}/edit', [MetaController::class, 'edit'])->name('meta.edit');
         Route::put('meta/{meta}', [MetaController::class, 'update'])->name('meta.update');
+
+        Route::get('skill', [SkillController::class, 'index'])->name('skill.index');
+        Route::post('skill', [SkillController::class, 'store'])->name('skill.store');
+        Route::get('skill/create', [SkillController::class, 'create'])->name('skill.create');
+        Route::get('skill/{skill}/edit', [SkillController::class, 'edit'])->name('skill.edit');
+        Route::put('skill/{skill}', [SkillController::class, 'update'])->name('skill.update');
+        Route::delete('skill/{skill}', [SkillController::class, 'destroy'])->name('skill.destroy');
+
+        Route::get('project', [ProjectController::class, 'index'])->name('project.index');
+        Route::post('project', [ProjectController::class, 'store'])->name('project.store');
+        Route::get('project/create', [ProjectController::class, 'create'])->name('project.create');
+        Route::get('project/{project}/edit', [ProjectController::class, 'edit'])->name('project.edit');
+        Route::put('project/{project}', [ProjectController::class, 'update'])->name('project.update');
+        Route::delete('project/{project}', [ProjectController::class, 'destroy'])->name('project.destroy');
 
         Route::get('user', [UserController::class, 'index'])->name('user.index');
         Route::post('user', [UserController::class, 'store'])->name('user.store');
