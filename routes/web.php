@@ -7,6 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\MetaController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\SkillController;
+use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,5 +56,20 @@ Route::group(
         Route::post('user', [UserController::class, 'store'])->name('user.store');
         Route::get('user/create', [UserController::class, 'create'])->name('user.create');
         Route::delete('user/{user}', [UserController::class, 'destroy'])->name('user.destroy');
+
+        Route::get('/symlink', function () {
+            //Artisan::call('storage:link');
+
+            // https://dumpcoder.com/symlink-laravel-storage-folder-on-shared-hosting/
+
+            // the webroot is in the public folder now (it is not the best solution)
+            // so the paths to the target and link needs to be fixed
+            $documentRoot = str_replace('public/', '', $_SERVER['DOCUMENT_ROOT']);
+            $target = $documentRoot . 'storage/app/public';
+            $link = $documentRoot . 'public/storage';
+
+            symlink($target, $link);
+            echo "Done";
+        });
     }
 );
