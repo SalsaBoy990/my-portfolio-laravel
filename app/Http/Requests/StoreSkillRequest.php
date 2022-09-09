@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
+use App\Models\Skill;
 
 class StoreSkillRequest extends FormRequest
 {
@@ -29,15 +30,7 @@ class StoreSkillRequest extends FormRequest
             'content' => ['required', 'max:2000'],
             'language' => ['required', Rule::in(['hu', 'en'])],
             'bg_color' => [
-                'required', Rule::in([
-                    'bg-main-800',
-                    'bg-main-400',
-                    'bg-grass-green',
-                    'bg-turquoise',
-                    'bg-brown',
-                    'bg-darkpurple',
-                    'bg-gray-400'
-                ])
+                'required', Rule::in(Skill::COLORS)
             ],
         ];
     }
